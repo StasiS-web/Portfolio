@@ -17,6 +17,8 @@
     --sat: 66%;
     --lig: 75%;
     --second-hue: 219;
+    --first-color-light: #7B6F71;
+    --first-color-lighten: #FBF9F9;
 
     --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
     --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
@@ -240,7 +242,7 @@ body.dark-theme {
 /* Change background header */
 .scroll-header {
   background-color: var(--body-color);
-  box-shadow: 0 1px 4px hsla(0, 4%, 15%, .10);
+  box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
 }
 
   /*=============== HOME ===============*/
@@ -376,48 +378,103 @@ body.dark-theme {
   } 
   
 /*=============== ABOUT ===============*/
-  .story__container {
-    row-gap: 7.5rem;
+  .about__container {
+    row-gap: 2.5rem;
   }
-  
-  .story__title {
-    font-size: var(--h1-font-size);
-    margin-bottom: var(--mb-1);
-  }
-  
-  .story__description {
-    margin-bottom: var(--mb-2-5);
-  }
-  
-  .story__images {
-    position: relative;
-  }
-  
-  .story__img, 
-  .story__square {
-    width: 250px;
-  }
-  
-  .story__square {
-    height: 250px;
-    background-color: var(--first-color);
-  }
-  
-  .story__img {
-    position: absolute;
-    left: 3rem;
-    top: -3rem;
+
+  .about__img {
+    width: 220px;
+    border-radius: 1.5rem;
+    justify-self: center;
   }
    
+  .about_data{
+    text-align: center;
+  }
+
+  .about_info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about_box{
+     background-color: var(--container-color);
+     border-radius: .75rem;
+     padding: .75rem .5rem;
+  }
+
+  .about_icon{
+    font-size: 1.5rem;
+    color: var(--first-color);
+    margin-bottom: .5rem;
+  }
+  
+  .about__title {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+  }
+
+  .about_subtitle{
+    font-size: var(--tiny-font-size);
+  }
+  
+  .about__description {
+   margin-bottom: 2ren;
+  }
+  
 /*=============== SKILLS ===============*/
+.skills_container{
+  row-gap: 2rem;
+  padding-left: 1rem;
+}
 
+.skills_content{
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
 
+.skills_title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
-/* Services modal */
+.skills_box{
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
 
+.skills_group{
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+}
 
-/*Active modal*/
+.skills_data{
+  display: flex;
+  column-gap: .5rem;
+}
 
+.skills .bxs-badge-check{
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.skills_name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+
+.skills_level{
+  font-size: var(--tiny-font-size);
+}
 
 /*=============== QUALIFICATION ===============*/
 
@@ -545,19 +602,11 @@ body.dark-theme {
     font-size: var(--smaller-font-size);
   }
 
-  .story__square,
-  .story__img,
-  .testimonial__square,
-  .testimonial__img {
+  .about__img {
     width: 180px;
   }
 
-  .story__square,
-  .testimonial__square {
-    height: 180px;
-  }
-}
-
+  
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .home__img-bg {
