@@ -37,6 +37,35 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
+/*=============== QUALIFICATION ===============*/
+const tabs = document.querySelectorAll('[data-target]'),
+    tabContent = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab =>{
+    tab.addEventListener('click', () =>{
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContent.forEach(tabContent =>{
+            tabContent.classList.remove('qualification_active')
+        })
+        target.classList.add('qualification_active')
+
+        tab.forEach(tab =>{
+            tab.classList.remove('qualification_active')
+        })
+        tab.classList.add('qualification_active')
+    })
+})
+
+/*===== PORTFOLIO =====*/
+
+
+/* Active menu portfolio*/
+
+
+/*===== CONTACTME =====*/
+
+
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
 
@@ -126,3 +155,8 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*===== FOOTER =====*/
+
+
+/*===== MEDIA QUERIES =====*/
