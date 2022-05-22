@@ -10,6 +10,4 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 * JavaScript
 * [Boxicons](https://boxicons.com/)
 * [Photoleap](https://www.photoleapapp.com/landing/photoleap/v1/?flowId=photoleap_interactive&variantId=plt) (Mobile Photo editor)
-
-## Resources
-
+* [Swiper](https://swiperjs.com/)
