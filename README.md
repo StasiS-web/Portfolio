@@ -8,6 +8,8 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 * HTML5
 * CSS
 * JavaScript
+* Responsive websiite
 * [Boxicons](https://boxicons.com/)
 * [Photoleap](https://www.photoleapapp.com/landing/photoleap/v1/?flowId=photoleap_interactive&variantId=plt) (Mobile Photo editor)
 * [Swiper](https://swiperjs.com/)
+* [Scroll Reveal](https://scrollrevealjs.org/)
