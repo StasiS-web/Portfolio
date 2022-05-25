@@ -9,7 +9,7 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 * CSS
 * JavaScript
 * Responsive website
-* [Boxicons](https://boxicons.com/)
+* [Remix Icon](https://remixicon.com/)
 * [Photoleap](https://www.photoleapapp.com/landing/photoleap/v1/?flowId=photoleap_interactive&variantId=plt) (Mobile Photo editor)
 * [Swiper](https://swiperjs.com/)
 * [Scroll Reveal](https://scrollrevealjs.org/)
