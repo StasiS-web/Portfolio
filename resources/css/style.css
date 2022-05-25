@@ -235,18 +235,44 @@ body.light-theme{
   z-index: var(--z-fixed);
   transition: .4s; /* For light mode animation */
 }
+
+.nav-conatiner{
+  position: relative;
+}
   
 .nav {
   height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-left: 0;
+  justify-content: center;
+  text-align: center;
   align-items: center;
+}
+
+.nav a{
+  text-align: center;
+  display: inline-flex;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0 auto;
+}
+
+.nav a:hover{
+  background: var(--first-color-alt);
+  color: var(--first-color-lighten);
 }
   
 .nav__logo {
   color: var(--first-color);
   font-weight: var(--font-medium);
   transition: .4s;
+  position: inherit;
+  z-index: inherit;
 }
 
 .nav_logo:hover{
@@ -255,6 +281,7 @@ body.light-theme{
   
 .nav-menu{
   position: fixed;
+  text-align: center;
   bottom: 1rem;
   background-color: hsla(var(--second-hue), 32%, 16%, .8);
   width: 90%;
@@ -265,9 +292,10 @@ body.light-theme{
 }
 
 .nav__list{
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .nav_link{
@@ -277,15 +305,22 @@ body.light-theme{
   display: flex;
   border-radius: 5rem;
 }
+
+.change-theme
+{
+  position: relative;
+  right: -390px;
+  top: -390px;
+}
   
 /* Active link */
 .active-link {
     background: linear-gradient(180deg,
-              hsla(var(--first-hue), var(--sat), var(--lig), 1),
-              hsla(var(--first-hue), var(--sat), var(--lig), .2)
+                hsla(var(--first-hue), var(--sat), var(--lig), 1),
+                hsla(var(--first-hue), var(--sat), var(--lig), .2)
             );
     box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), .4);
-    color: var(--title-color);
+    
 }
 
 /* Change background header */
@@ -302,7 +337,7 @@ body.light-theme{
 }
 
 .home__data{
-  text-align: center;
+ text-align: center;
 }
 
 .home_greeting, .home_education{
@@ -326,6 +361,9 @@ body.light-theme{
 }
 
 .home__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 160px;
 }
 
@@ -511,7 +549,7 @@ body.light-theme{
   column-gap: .5rem;
 }
 
-.skills .bxs-badge-check{
+.skills .ri-checkbox-circle-fill{
   font-size: 1rem;
   color: var(--first-color);
 }
@@ -846,7 +884,7 @@ textarea{
 }
 
 /*==================== MEDIA QUERIES ====================*/
- /* For small devices */
+/* For small devices */
  @media screen and (max-width: 320px) {
   .nav_menu{
     padding: 1rem 1.5rem;
@@ -1034,3 +1072,17 @@ textarea{
     border-radius: .5rem;
   }
 }
+
+/*  Responsive typography */
+@media scren and(min-width: 968px){
+  :root{
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
