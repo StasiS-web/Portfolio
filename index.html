@@ -9,13 +9,13 @@
         <link href="/resources/img/icons8_portfolio_32.ico" type="image/ico" sizes="32x32" rel="icon" >
 
         <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="/resources/css/swiper-bundle.min.css">
+        <link href="/resources/css/swiper-bundle.min.css" rel="stylesheet">
 
         <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="/resources/css/style.css" />
+        <link href="/resources/css/style.css" rel="stylesheet" />
     </head>
     <body>
         <header class="header scroll-header" id="header">
@@ -84,7 +84,7 @@
                         <h3 class="home_education">Junior Developer 😊</h3> 
 
                         <div class="home_buttons">
-                            <a download="newfilename" href="/resources/pdf/Stanislava's Resume.pdf" class="button button--ghost">
+                            <a href="/resources/pdf/Stanislava's Resume.pdf" download="newfilename" class="button button--ghost">
                                 <i class="ri-download-fill"></i>
                                 Download CV
                             </a>
@@ -133,7 +133,9 @@
                            <div class="about_box">
                             <i class="ri-calendar-event-fill about_icon"></i>
                                 <h3 class="about_title">Conferences</h3>
+                                <span class="about_subtitile">MSBuild 2022,</span>
                                 <span class="about_subtitile">MSBuild 2021,</span>
+                                <br/>
                                 <span class="about_subtitile">.NET Conf 2021,</span>
                             </div>
 
@@ -147,7 +149,9 @@
                                 <i class="ri-earth-fill about_icon"></i>
                                 <h3 class="about_title">Languages</h3>
                                 <span class="about_subtitile">English,</span>
+                                <br/>
                                 <span class="about_subtitile">Spanish,</span>
+                                <br/>
                                 <span class="about_subtitile">Bulgarian</span>
                             </div>
 
@@ -156,7 +160,9 @@
                                 <i class="ri-star-smile-line about_icon"></i>
                                 <h3 class="about_title">Interests</h3>
                                 <span class="about_subtitile">Yoga,</span>
+                                <br/>
                                 <span class="about_subtitile">Cycling,</span>
+                                <br/>
                                 <span class="about_subtitile">Swimming,</span>
                                 <span class="about_subtitile">Reading</span>
                             </div>
@@ -187,7 +193,7 @@
                                     <i class="ri-checkbox-circle-fill"></i>
                                     
                                     <div>
-                                        <h3 class="skills_name">HTML</h3>
+                                        <h3 class="skills_name">HTML5</h3>
                                         <span class="skills_level">Advanced</span>
                                     </div>
                                 </div>
@@ -265,11 +271,47 @@
                                 </div>
                             </div>
                     </div>
+
+                    <div class="skills_content">
+                        <h3 class="skills_title">DataBase</h3>
+                       
+                        <div class="skills_box">
+                            <div class="skills_group">
+                                <div class="skills_data">
+                                    <i class="ri-checkbox-circle-fill"></i>
+                                    
+                                    <div>
+                                        <h3 class="skills_name">SQL Server</h3>
+                                        <span class="skills_level">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="skills_content">
                         <h3 class="skills_title">Tools</h3>
                            
                         <div class="skills_box">
                             <div class="skills_group">
+                                <div class="skills_data">
+                                    <i class="ri-checkbox-circle-fill"></i>
+                                    
+                                    <div>
+                                        <h3 class="skills_name">Visual Studio</h3>
+                                        <span class="skills_level">Intermediate</span>
+                                    </div>
+                                </div>
+
+                                <div class="skills_data">
+                                    <i class="ri-checkbox-circle-fill"></i>
+                                    
+                                    <div>
+                                        <h3 class="skills_name">VSCode</h3>
+                                        <span class="skills_level">Intermediate</span>
+                                    </div>
+                                </div>
+
                                 <div class="skills_data">
                                     <i class="ri-checkbox-circle-fill"></i>
                                     
@@ -320,7 +362,7 @@
                                     It is user-friendly to use and has a beautiful interface.
                                 </p>
                                 <div class="portfolio_buttons">
-                                    <a href="https://github.com/StasiS-web/Portfolio" class="button button--flex button--small portfolio_button">
+                                    <a href="https://stasis-web.github.io/portfolio/" class="button button--flex button--small portfolio_button">
                                         <i class="ri-git-repository-line"></i> GitHub
                                     </a>
                                     <a href="#" class="button button--flex button--small portfolio_button">
