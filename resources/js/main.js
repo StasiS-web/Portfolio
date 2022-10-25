@@ -1,4 +1,5 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+"use strict";
 function scrollHeader(){
     const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
@@ -38,13 +39,6 @@ let swiper = new Swiper(".portfolio_container", {
       clickable: true,
     },
 });
-
-/*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
-
-/* Link active work */ 
-
-
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
