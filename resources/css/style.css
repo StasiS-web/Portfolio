@@ -1,12 +1,9 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sen:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
 --header-height: 3.5rem;
---first-color-light: #7B6F71;
---first-color-lighten: #FBF9F9;
-
 --first-color: #A395E9;
 --first-color-alt: #9584E6; /* -4 */
 --title-color: #FAFCFF;
@@ -17,20 +14,31 @@
   
 /*========== Font and typography ==========*/
 /*.5rem = 8px | 1rem = 16px ...*/
---body-font: 'Lora', sans-serif;
---title-font: 'Poppins', serif;
---biggest-font-size: 1.75rem;
+--body-font: 'Poppins', sans-serif;
+
+--biggest-font-size: 2rem;
 --h1-font-size: 1.5rem;
 --h2-font-size: 1.25rem;
---h3-font-size: 1rem;
---normal-font-size: 0.938rem;
---small-font-size: 0.813rem;
+--h3-font-size: 1.125rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
 --smaller-font-size: .75rem;
 --tiny-font-size: .625rem;
   
 /*========== Font weight ==========*/
 --font-medium: 500;
 --font-semibold: 600;
+
+/*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
 
 /*========== z index ==========*/
 --z-tooltip: 10;
@@ -180,9 +188,9 @@ body.light-theme{
 }
   
 .main {
-  overflow: hidden;
+  overflow: hidden; 
 }
-  
+
 .section {
   padding: 4.5rem 0 1rem;
 }
@@ -196,7 +204,7 @@ body.light-theme{
 .section_title {
   font-size: var(--h1-font-size);
   color: var(--first-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
   
 .section_subtitle, 
@@ -204,6 +212,7 @@ body.light-theme{
   display: block;
   font-size: var(--small-font-size);
   color: var(--text-color-light);
+  margin-bottom: 2rem;
 }
   
 /*=============== HEADER & NAV ===============*/
@@ -228,11 +237,16 @@ body.light-theme{
   align-items: center;
   position: fixed;
   height: var(--header-height);
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin-left: 0;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  width: 528px;
+  height: 72px;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 32px rgba(64, 79, 165, .2);
+  padding: 1.5rem .5rem;
+  margin: 0 auto;
+  border-radius: .65rem;
 }
 
 .nav a{
@@ -260,49 +274,69 @@ body.light-theme{
 .nav_logo:hover{
   color: var(--first-color-alt);
 }
-  
-.nav-menu{
+
+.nav .nav-menu{
   position: fixed;
   text-align: center;
   bottom: 1rem;
   background-color: rgba(28, 37, 54, .8);
   width: 90%;
   border-radius: 4rem;
-  padding: 1rem 2.25rem;
+  padding: 1rem 1.25rem;
   backdrop-filter: blur(10px);
-  transition: .4s; /* For light mode animation */
+  transition: all .4s ease; /* For light mode animation */
 }
 
 .nav_list{
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
 }
 
 .nav_link{
-  color: var(--text-color);
-  font-size: 1.25rem;
-  padding: .4rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 5rem;
+}
+
+.nav_link i{
+  font-size: 1.5 rem;
+  color: var(--title-color);
+  z-index: 20px;
+  transition: .3s;
+}
+
+.nav_name{
+   font-size: var(--tiny-font-size);
+   position: absolute;
+   font-weight: 500;
+   transform: translateY(45px);
+   color: var(--title-color);
+   z-index: 20px;
+   transition: .4s;
+   opacity: 0;
 }
 
 .change-theme
 {
   position: relative;
-  right: -390px;
-  top: -390px;
+  right: -550px;
+  top: -890px;
 }
-  
+
 /* Active link */
-.active-link {
-    background: linear-gradient(180deg,
-               rgba(163, 149, 233, 1),
-               rgba(163, 149, 233, .2)
-            );
-    box-shadow: 0 0 16px rgba(163, 149, 233, .4);
-    
+.active-link i{
+  color: var(--text-color);
+}
+
+.active-link .nav_name{
+  opacity: 1;
+  transform: translateY(28px);
+}
+
+.active-link{
+  box-shadow: 0 0 16px rgba(163, 149, 233, .4);
 }
 
 /* Change background header */
@@ -545,10 +579,11 @@ body.light-theme{
 
 .about_subtitle{
   font-size: var(--tiny-font-size);
+  margin-bottom: 2rem;
 }
   
 .about_description {
-  margin-bottom: 2ren;
+  margin-bottom: 2rem;
 }
   
 /*=============== SKILLS ===============*/
@@ -641,7 +676,7 @@ body.light-theme{
 }
 
 .qualification_icon{
-  font-size: 1.8rem;
+  font-size: 1.5 rem;
   margin-right: var(--mb-0-25);
 }
 
@@ -783,6 +818,7 @@ body.light-theme{
 }
 
 .contact_card{
+  grid-row: 1/3;
   background-color: var(--container-color);
   padding: 1rem;
   border-radius: .75rem;
@@ -790,7 +826,7 @@ body.light-theme{
 }
 
 .contact_card-icon{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--first-color-alt);
   margin-bottom: .25rem;
 }
@@ -807,26 +843,6 @@ body.light-theme{
 .contact_card-data{
   display: block;
   margin-bottom: .75rem;
-}
-
-.contact_button{
-  color: var(--first-color);
-  font-size: var(--small-font-size);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: .25rem;
-}
-
-.contact_button:hover, .contact_button-icon{
-  transform: translateX(.25rem);
-}
-
-.contact_button-icon{
-  font-size: 1rem;
-  transition: .4s;
-  width: 100%;
-  height: 100%;
 }
 
 /*=============== FOOTER ===============*/
