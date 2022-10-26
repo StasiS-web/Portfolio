@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -17,7 +17,7 @@
   
 /*========== Font and typography ==========*/
 /*.5rem = 8px | 1rem = 16px ...*/
---body-font: 'Oxygen', sans-serif;
+--body-font: 'Lato', sans-serif;
 --biggest-font-size: 1.75rem;
 --h1-font-size: 1.5rem;
 --h2-font-size: 1.25rem;
@@ -442,7 +442,7 @@ body.light-theme{
   background-color: var(--first-color);
   color: var(--body-color);
   padding: .75rem 1rem;
-  border-radius: .5rem;
+  border-radius: 3rem;
   font-weight: var(--font-medium);
   transition: .4s;
 }
@@ -457,6 +457,66 @@ body.light-theme{
   border: 2px solid var(--first-color);
   color: var(--first-color);
 } 
+
+/*=============== MAGIC BUTTON ===============*/
+.btn{
+  position: relative;
+  padding: .9rem 2.20rem;
+  transition: .4s;
+}
+
+.blog img{
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  pointer-events: none;
+  transition: .6s;
+  opacity: 0; 
+}
+
+/*=============== Move 3D geometric elements ===============*/
+.btn_cone{
+  width: 18px;
+  transform: translate(-25px, -6px) rotate(55deg);
+  filter: blur(.5px);
+}
+
+.btn_torus{
+  width: 38px;
+  transform: translate(7px, -14px) rotate(80deg);
+}
+
+.btn_icosahedron{
+  width: 36px;
+  transform: translate(34px, -4px) rotate(-45deg);
+  filter: blur(.9px);
+}
+
+.btn_sphere{
+  width: 30px;
+  transform: translate(-5px, 15px) rotate(40deg);
+}
+
+/*=============== View 3D geometric elements ===============*/
+.btn:hover img {
+  opacity: 1;
+}
+
+.btn:hover .btn_cone {
+  transform: translate(-38px, -10px) scale(1.2);
+}
+
+.btn:hover .btn_torus {
+  transform: translate(7px, -32px) scale(1.1);
+}
+
+.btn:hover .btn_icosahedron {
+  transform: translate(50px, -20px) scale(1.1);
+}
+
+.btn:hover .btn_sphere {
+  transform: translate(-14px, 20px) scale(1.1);
+}
   
 /*=============== ABOUT ===============*/
 .about_container {
