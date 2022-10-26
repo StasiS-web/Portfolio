@@ -16,7 +16,7 @@
 /*.5rem = 8px | 1rem = 16px ...*/
 --body-font: 'Poppins', sans-serif;
 
---biggest-font-size: 2rem;
+--biggest-font-size: 1.75rem;
 --h1-font-size: 1.5rem;
 --h2-font-size: 1.25rem;
 --h3-font-size: 1.125rem;
@@ -210,7 +210,7 @@ body.light-theme{
 .section_subtitle, 
 .contact_subtitle {
   display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--h2-font-size);
   color: var(--text-color-light);
   margin-bottom: 2rem;
 }
@@ -259,19 +259,7 @@ body.light-theme{
 }
 
 .nav a:hover{
-  background: var(--first-color-alt);
-  color: var(--first-color-lighten);
-}
-  
-.nav_logo {
-  color: var(--first-color);
-  font-weight: var(--font-medium);
-  transition: .4s;
-  position: inherit;
-  z-index: inherit;
-}
-
-.nav_logo:hover{
+  background: var(--first-color);
   color: var(--first-color-alt);
 }
 
@@ -308,7 +296,7 @@ body.light-theme{
 }
 
 .nav_name{
-   font-size: var(--tiny-font-size);
+   font-size: var(--smaller-font-size);
    position: absolute;
    font-weight: 500;
    transform: translateY(45px);
@@ -357,7 +345,7 @@ body.light-theme{
 
 .home_greeting, 
 .home_education{
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
 }
 
@@ -377,7 +365,7 @@ body.light-theme{
 }
 
 .home_img {
-  width: 160px;
+  width: 190px;
 }
 
 .home_handle{
@@ -392,7 +380,6 @@ body.light-theme{
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
 }
   
 .home_buttons{
@@ -411,7 +398,7 @@ body.light-theme{
   bottom: 5rem;
   left: 0;
   display: grid;
-  height: 130px;
+  height: 12px;
   row-gap: .5rem;
 }
   
@@ -422,7 +409,7 @@ body.light-theme{
   padding: .25rem;
   border-radius: .25rem;
   display: flex;
-  font-size: 1rem;
+  font-size: .5rem;
   transition: .4s;
 }
 
@@ -578,7 +565,7 @@ body.light-theme{
 }
 
 .about_subtitle{
-  font-size: var(--tiny-font-size);
+  font-size: var(--h2-font-size);
   margin-bottom: 2rem;
 }
   
@@ -654,7 +641,7 @@ body.light-theme{
 }
 
 .skills_level{
-  font-size: var(--tiny-font-size);
+  font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
 
@@ -702,15 +689,15 @@ body.light-theme{
 
 .qualification_calendar, 
 .volunteering_calendar{
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
 
 .qualification_rounder, 
 .volunteering_rounder{
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   background-color: var(--first-color);
   border-radius: 50%;
 }
@@ -718,7 +705,7 @@ body.light-theme{
 .qualification_line, 
 .volunteering_line{
   display: block;
-  width: 1px;
+  width: 1.5px;
   height: 100%;
   background-color: var(--first-color);
   transform: translate(6px, -7px);
@@ -757,11 +744,13 @@ body.light-theme{
 }
 
 .portfolio_descriptions{
+  font-size: var(--normal-font-size);
   margin-bottom: var(--mb-0-75);
   text-align: center;
 }
 
 .portfolio_buttons{
+  font-size: var(--normal-font-size);
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -788,7 +777,8 @@ body.light-theme{
   height: calc((100% - 30px) / 2) !important;
 }
 
-.swiper-container-horizontal, .swiper-pagination-bullets{
+.swiper-container-horizontal, 
+.swiper-pagination-bullets{
   bottom: -2.5rem;
 }
 
@@ -1036,12 +1026,12 @@ body.light-theme{
   }
 
   .home_img{
-    width: 220px;
+    width: 265px;
   }
 
   .home_social-link{
     padding: 4rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .home_social{
