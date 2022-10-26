@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Philosopher:wght@400;500&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -17,7 +17,8 @@
   
 /*========== Font and typography ==========*/
 /*.5rem = 8px | 1rem = 16px ...*/
---body-font: 'Lato', sans-serif;
+--body-font: 'Lora', sans-serif;
+--title-font: 'Philosopher', serif;
 --biggest-font-size: 1.75rem;
 --h1-font-size: 1.5rem;
 --h2-font-size: 1.25rem;
@@ -75,6 +76,7 @@ body{
 }
 
 h1, h2, h3 {
+  font-family: var(--title-font);
   color: var(--title-color);
   font-weight: var(--font-semibold);
   margin-top: 0;
@@ -197,18 +199,18 @@ body.light-theme{
   padding: 4.5rem 0 1rem;
 }
   
-.section__title, 
-.section__subtitle {
+.section_title, 
+.section_subtitle {
   text-align: center;
 }
   
-.section__title {
+.section_title {
   font-size: var(--h2-font-size);
   color: var(--first-color);
   margin-bottom: 2rem;
 }
   
-.section__subtitle {
+.section_subtitle {
   display: block;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
@@ -474,7 +476,7 @@ body.light-theme{
   opacity: 0; 
 }
 
-/*=============== Move 3D geometric elements ===============*/
+/* Move 3D geometric elements */
 .btn_cone{
   width: 18px;
   transform: translate(-25px, -6px) rotate(55deg);
@@ -497,7 +499,7 @@ body.light-theme{
   transform: translate(-5px, 15px) rotate(40deg);
 }
 
-/*=============== View 3D geometric elements ===============*/
+/* View 3D geometric elements */
 .btn:hover img {
   opacity: 1;
 }
@@ -590,18 +592,38 @@ body.light-theme{
   column-gap: 2.5rem;
 }
 
-.skills_group{
+.skills_group, .skills_data, .skills_blob {
   display: grid;
+}
+
+.skills_group{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
   align-content: flex-start;
   row-gap: 1rem;
 }
 
 .skills_data{
   display: flex;
+  justify-content: center;
+  text-align: center;
   column-gap: .5rem;
 }
 
-.skills .ri-checkbox-circle-fill{
+.skills_blob {
+  width: 80px;
+  height: 100px;
+  background-color: var(--container-color);
+  border-radius: 3rem;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+
+.skills_blob img {
+  width: 40px;
+}
+
+.skills {
   font-size: 1rem;
   color: var(--first-color);
 }
@@ -610,10 +632,12 @@ body.light-theme{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   line-height: 18px;
+  margin-bottom: .25rem;
 }
 
 .skills_level{
   font-size: var(--tiny-font-size);
+  color: var(--text-color-light);
 }
 
 /*=============== QUALIFICATION ===============*/
