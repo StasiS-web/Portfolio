@@ -205,6 +205,7 @@ body.light-theme{
   font-size: var(--h1-font-size);
   color: var(--first-color);
   margin-bottom: 1rem;
+  font-weight: bolder;
 }
   
 .section_subtitle, 
@@ -213,6 +214,7 @@ body.light-theme{
   font-size: var(--h2-font-size);
   color: var(--text-color-light);
   margin-bottom: 2rem;
+  font-weight: bold;
 }
   
 /*=============== HEADER & NAV ===============*/
@@ -646,7 +648,7 @@ body.light-theme{
 }
 
 /*=============== QUALIFICATION ===============*/
-.qualification_tabs, volunteering__tabs{
+.qualification_tabs, .volunteering_tabs{
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2);
@@ -656,6 +658,7 @@ body.light-theme{
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .qualification_button:hover{
@@ -678,6 +681,9 @@ body.light-theme{
 .volunteering_title{
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: bold;
 }
 
 .qualification_subtitle, 
@@ -685,29 +691,59 @@ body.light-theme{
   display: inline-block;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
+  line-height: 1.5;
+
 }
 
 .qualification_calendar, 
 .volunteering_calendar{
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
-.qualification_rounder, 
-.volunteering_rounder{
-  display: inline-block;
-  width: 11px;
-  height: 11px;
+.timeline_component{
+    margin: 0 20px 20px 20px;
+}
+
+.timeline_component-bg {
+
+  padding: 1.5em;
+  background: rgba(236, 225, 249, 0.4);
+  box-shadow: 0 0 5px rgba(255, 255, 255, .2);
+  border-radius: 10px;
+}
+
+.timeline {
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 3 1fr;
+  font-family: var(--body-font);
+}
+
+.timeline_rounder{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
   background-color: var(--first-color);
   border-radius: 50%;
 }
 
-.qualification_line, 
-.volunteering_line{
-  display: block;
-  width: 1.5px;
-  height: 100%;
-  background-color: var(--first-color);
+.timeline_rounder--bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.timeline_middle{
+  position: relative;
+  background-color: rgb(83, 108, 147);
+  padding: 3px;
+  width: 1px;
+  height: 170px;
   transform: translate(6px, -7px);
 }
 
@@ -719,7 +755,7 @@ body.light-theme{
   display: block;
 }
 
-.qualification_button.qualification_active{
+.qualification_button, .qualification_active{
   color: var(--first-color);
 }
 
