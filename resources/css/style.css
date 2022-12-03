@@ -400,7 +400,7 @@ body.light-theme{
   bottom: 5rem;
   left: 0;
   display: grid;
-  height: 12px;
+  height: 12rem;
   row-gap: .5rem;
 }
   
@@ -411,7 +411,7 @@ body.light-theme{
   padding: .25rem;
   border-radius: .25rem;
   display: flex;
-  font-size: .5rem;
+  font-size: 1.5rem;
   transition: .4s;
 }
 
@@ -689,6 +689,7 @@ body.light-theme{
 .qualification_subtitle, 
 .volunteering_subtitle{
   display: inline-block;
+  color: var(--first-color);
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
   line-height: 1.5;
@@ -706,7 +707,6 @@ body.light-theme{
 }
 
 .timeline_component-bg {
-
   padding: 1.5em;
   background: rgba(236, 225, 249, 0.4);
   box-shadow: 0 0 5px rgba(255, 255, 255, .2);
@@ -1151,4 +1151,3 @@ body.light-theme{
     --smaller-font-size: .813rem;
   }
 }
-
