@@ -367,21 +367,25 @@ body.light-theme{
 }
 
 .home_img {
-  width: 190px;
+  width: 150px;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
 }
 
 .home_handle{
-  justify-self: center;
-  width: 190px;
+  position: relative;
+  width: 150px;
   height: 293px;
   background: linear-gradient(180deg,
             rgba(163, 149, 233, 1),
             rgba(163, 149, 233, .2)
             );
   border-radius: 10rem 10rem 1rem 1rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
 }
   
 .home_buttons{
