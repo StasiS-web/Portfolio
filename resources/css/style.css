@@ -701,22 +701,30 @@ body.light-theme {
   color: var(--text-color);
 }
 
-.certificate_link {
-  cursor: pointer;
-  margin-top: 5px;
+.qualification_calendar {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-.timeline {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 25px;
-  display: grid;
-  grid-template-columns: 1fr 3 1fr;
-  font-family: var(--body-font);
+.qualification [data-content] {
+  display: none;
 }
+
+.qualification_active[data-content] {
+  display: block;
+}
+
+.qualification_button,
+.qualification_active {
+  color: var(--first-color);
+}
+
+/*=============== TIMELINE ===============*/
 
 .timeline ul {
-  background-color: rgb(83, 108, 147);
+  background: var(--body-color);
   padding: 50px 0;
 }
 
@@ -726,6 +734,7 @@ body.light-theme {
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
+  background: var(--first-color-alt);
 }
 
 .timeline ul li::after {
@@ -765,7 +774,7 @@ body.light-theme {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent var(--first-color) transparent transparent;
+  border-color: transparent var(--container-color) transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -775,113 +784,16 @@ body.light-theme {
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent var(--first-color);;
+  border-color: transparent transparent transparent var(--container-color);
 }
 
-.qualification_calendar {
+time {
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.timeline ul li::after {
-  transition: background 0.5s ease-in-out;
-}
-
-.timeline ul li.in-view::after {
-  background: var(--first-color);
-}
-
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.timeline ul li:nth-child(odd) div {
-  transform: translate3d(200px, 0, 0);
-}
-
-.timeline ul li:nth-child(even) div {
-  transform: translate3d(-200px, 0, 0);
-}
-
-.timeline ul li.in-view div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
-.timeline-clippy ul li::after {
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
-}
-
-.timeline-rhombus ul li::after {
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.timeline-rhombus ul li div::before {
-  bottom: 12px;
-}
-
-.timeline-star ul li::after {
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-}
-
-.timeline-heptagon ul li::after {
-  clip-path: polygon(
-    50% 0%,
-    90% 20%,
-    100% 60%,
-    75% 100%,
-    25% 100%,
-    0% 60%,
-    10% 20%
-  );
-}
-
-.timeline-infinite ul li::after {
-  animation: scaleAnimation 2s infinite;
-}
-
-@keyframes scaleAnimation {
-  0% {
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    transform: translateX(-50%) scale(1.25);
-  }
-  100% {
-    transform: translateX(-50%) scale(1);
-  }
-}
-
-.qualification [data-content] {
-  display: none;
-}
-
-.qualification_active[data-content] {
-  display: block;
-}
-
-.qualification_button,
-.qualification_active {
-  color: var(--first-color);
-}
 
 /*=============== PORTFOLIO ===============*/
 .portfolio_container {
