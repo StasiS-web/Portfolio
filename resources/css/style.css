@@ -538,6 +538,7 @@ body.light-theme {
 
 .about_img {
   width: 220px;
+  height: 400px;
   border-radius: 1.5rem;
   justify-self: center;
 }
@@ -652,25 +653,6 @@ body.light-theme {
   color: var(--text-color-light);
 }
 
-/*=============== LICENSES & CERTIFICATES ===============*/
-
-.certificate_list {
-  cursor: pointer;
-}
-
-.certificate_container ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 0;
-}
-
-.certificate_container ul li {
-  flex: 0 0 33.333333%;
-  text-align: center;
-  margin-top: 5px;
-}
-
 /*=============== QUALIFICATION ===============*/
 .qualification_tabs {
   display: flex;
@@ -717,6 +699,11 @@ body.light-theme {
 .qualification_calendar {
   font-size: var(--small-font-size);
   color: var(--text-color);
+}
+
+.certificate_link {
+  cursor: pointer;
+  margin-top: 5px;
 }
 
 .timeline {
