@@ -202,7 +202,8 @@ body.light-theme {
 
 .section_title,
 .section_subtitle,
-.contact_subtitle {
+.contact_subtitle,
+.certificate_subtitle {
   text-align: center;
 }
 
@@ -214,7 +215,8 @@ body.light-theme {
 }
 
 .section_subtitle,
-.contact_subtitle {
+.contact_subtitle,
+.certificate_subtitle {
   display: block;
   font-size: var(--h2-font-size);
   color: var(--text-color-light);
@@ -650,9 +652,27 @@ body.light-theme {
   color: var(--text-color-light);
 }
 
+/*=============== LICENSES & CERTIFICATES ===============*/
+
+.certificate_list {
+  cursor: pointer;
+}
+
+.certificate_container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.certificate_container ul li {
+  flex: 0 0 33.333333%;
+  text-align: center;
+  margin-top: 5px;
+}
+
 /*=============== QUALIFICATION ===============*/
-.qualification_tabs,
-.volunteering_tabs {
+.qualification_tabs {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2);
@@ -662,6 +682,7 @@ body.light-theme {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  padding-left: 10px;
 }
 
 .qualification_button:hover {
@@ -669,26 +690,23 @@ body.light-theme {
 }
 
 .qualification_icon {
-  font-size: 1.5 rem;
+  font-size: 1.5rem;
   margin-right: var(--mb-0-25);
 }
 
-.qualification_data,
-.volunteering_data {
+.qualification_data {
   direction: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
 }
 
-.qualification_title,
-.volunteering_title {
+.qualification_title {
   font-size: var(--normal-font-size);
   margin: 0;
   font-weight: bold;
 }
 
-.qualification_subtitle,
-.volunteering_subtitle {
+.qualification_subtitle {
   display: inline-block;
   color: var(--first-color);
   font-size: var(--small-font-size);
@@ -696,21 +714,9 @@ body.light-theme {
   line-height: 1.5;
 }
 
-.qualification_calendar,
-.volunteering_calendar {
+.qualification_calendar {
   font-size: var(--small-font-size);
   color: var(--text-color);
-}
-
-.timeline_component {
-  margin: 0 20px 20px 20px;
-}
-
-.timeline_component-bg {
-  padding: 1.5em;
-  background: rgba(236, 225, 249, 0.4);
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
 }
 
 .timeline {
@@ -722,29 +728,159 @@ body.light-theme {
   font-family: var(--body-font);
 }
 
-.timeline_rounder {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15px;
-  height: 15px;
-  background-color: var(--first-color);
-  border-radius: 50%;
-}
-
-.timeline_rounder--bottom {
-  top: initial;
-  bottom: 0;
-}
-
-.timeline_middle {
-  position: relative;
+.timeline ul {
   background-color: rgb(83, 108, 147);
-  padding: 3px;
-  width: 1px;
-  height: 170px;
-  transform: translate(6px, -7px);
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: var(--container-color);
+}
+
+.timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--first-color) transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent var(--first-color);;
+}
+
+.qualification_calendar {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.timeline ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: var(--first-color);
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.timeline-clippy ul li::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+  bottom: 12px;
+}
+
+.timeline-star ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.timeline-heptagon ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.timeline-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 .qualification [data-content] {
@@ -820,6 +956,7 @@ body.light-theme {
 .swiper-pagination-bullets {
   outline: none;
 }
+
 
 /*=============== CONTACT ===============*/
 .contact_container {
@@ -1146,5 +1283,32 @@ body.light-theme {
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f45b69 transparent transparent;
   }
 }
