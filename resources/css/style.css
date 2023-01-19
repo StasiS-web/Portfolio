@@ -412,6 +412,7 @@ body.light-theme {
   background-color: var(--container-color);
   color: var(--first-color);
   padding: 0.25rem;
+  margin-bottom: .5rem;
   border-radius: 0.25rem;
   display: flex;
   font-size: 1.5rem;
@@ -721,7 +722,7 @@ body.light-theme {
   color: var(--first-color);
 }
 
-/*=============== TIMELINE ===============*/
+/* Timeline for Qualification section */
 
 .timeline ul {
   background: var(--body-color);
@@ -794,6 +795,9 @@ time {
   margin-bottom: 8px;
 }
 
+.certificate_link {
+  margin-bottom: 10px;
+}
 
 /*=============== PORTFOLIO ===============*/
 .portfolio_container {
@@ -802,6 +806,7 @@ time {
 
 .portfolio_content {
   padding: 0 1.5rem;
+  margin-bottom: var(--mb-0-75);
 }
 
 .portfolio_title {
@@ -813,6 +818,10 @@ time {
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-0-75);
   text-align: center;
+}
+
+.portfolio_project_technology {
+  margin: var(--mb-0-75);
 }
 
 .portfolio_buttons {
@@ -1100,8 +1109,8 @@ time {
   }
 
   .home_social-link {
-    padding: 4rem;
-    font-size: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
   }
 
   .home_social {
