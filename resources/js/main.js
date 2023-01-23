@@ -63,17 +63,31 @@ tabs.forEach(tab =>{
   
 
 /*=============== PORTFOLIO ===============*/
-let swiper = new Swiper(".portfolio_container", {
-    slidesPerView: 3,
-    grid: {
-      rows: 2,
+var Swipes = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    loop: true,
+    speed: 1000,
+    spaceBetween: 15,
+    freeMode: true,
+    mousewheel: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
     },
-    spaceBetween: 30,
+    navigation: {
+      nextElement: ".swiper-button-next",
+      prevElement: ".swiper-button-prev"
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-});
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  });
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]');

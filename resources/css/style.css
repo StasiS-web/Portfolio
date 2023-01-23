@@ -817,6 +817,7 @@ time {
 
 .portfolio_descriptions {
   font-size: var(--normal-font-size);
+  margin-top: var(--mb-0-75);
   margin-bottom: var(--mb-0-75);
   text-align: center;
 }
@@ -838,7 +839,7 @@ time {
 
 .swiper {
   width: 950px;
-  height: 1000px;
+  height: 1300px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
@@ -865,6 +866,7 @@ time {
 .swiper-pagination-bullets {
   outline: none;
 }
+
 
 
 /*=============== CONTACT ===============*/
