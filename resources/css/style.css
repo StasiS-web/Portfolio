@@ -358,7 +358,7 @@ body.light-theme {
 }
 
 .home_education {
-  color: var(--text-color-light);
+  color: var(--container-color);
   margin-bottom: 2.5rem;
 }
 
