@@ -14,5 +14,7 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 * [Swiper](https://swiperjs.com/)
 * [Scroll Reveal](https://scrollrevealjs.org/)
 
+## :computer: [Demo](https://stasis-web.github.io/index.html) :desktop_computer:
+
 ## Acknowledments
 Thanks to Marlon for the [Theme](https://github.com/bedimcode/responsive-portfolio-website-Alexa). 
