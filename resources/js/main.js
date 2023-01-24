@@ -65,16 +65,11 @@ tabs.forEach(tab =>{
 /*=============== PORTFOLIO ===============*/
 var Swipes = new Swiper(".mySwiper", {
     effect: "coverflow",
-    grabCursor: true,
     loop: true,
     speed: 1000,
     spaceBetween: 15,
     freeMode: true,
     mousewheel: true,
-    lazyLoading: true,
-    keyboard: {
-      enabled: true
-    },
     navigation: {
       nextElement: ".swiper-button-next",
       prevElement: ".swiper-button-prev"

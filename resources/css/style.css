@@ -838,8 +838,8 @@ time {
 }
 
 .swiper {
-  width: 950px;
-  height: 1300px;
+  max-width: 500px;
+  max-height: 800px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
@@ -850,8 +850,19 @@ time {
   font-size: 18px;
   padding: 1.5rem;
   border-radius: 1.25rem;
+  transition: all 200s linear;
   background-color: var(--container-color);
   height: calc((100% - 30px) / 2) !important;
+}
+
+.slider_controls {
+  position: relative;
+}
+
+.swiper-pagination {
+  display: inline-block;
+  opacity: .2;
+  justify-content: center;
 }
 
 .swiper-container-horizontal,
@@ -863,11 +874,21 @@ time {
   background-color: var(--first-color);
 }
 
-.swiper-pagination-bullets {
-  outline: none;
+.swiper-button-prev,
+.swiper-button-next {
+  align-items: center;
+  color: var(--title-color);
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  top: 0;
+  z-index: 2;
 }
 
-
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: var(--first-color);
+}
 
 /*=============== CONTACT ===============*/
 .contact_container {
