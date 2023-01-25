@@ -85,7 +85,7 @@
     <!--=============== MAIN ===============-->
     <main class="main">
         <!--=============== HOME ===============-->
-        <section class="home_section" id="home">
+        <section class="home_section active" id="home">
             <div class="home_container container grid">
                 <div class="home_data">
                     <span class="home_greeting">Hello, I'm</span>
@@ -95,7 +95,7 @@
                     <div class="home_buttons">
                         <a href="/resources/pdf/Stanislava's Resume.pdf" download="resume"
                             class="button button--ghost">
-                            <i class="ri-download-fill"></i> Resume </a>
+                            <i class="ri-download-fill"></i> Download Resume </a>
                         <a href="https://codingexpert.medium.com/" target="_blank" class="button btn blog">
                             <span class="btn_text">Blog</span>
                             <img src="/resources/img/cone.png" alt="" class="btn_cone">
@@ -106,21 +106,30 @@
                     </div>
 
                     <div class="img">
-                        <div class="home_handle">
+                        <div class="home_handle .img">
                             <img src="/resources/img/home.png" alt="" class="home_img" />
                         </div>
                     </div>
+                    
+                    <div class="home_social">
+                        <a href="https://www.facebook.com/stanislavastoeva" target="_blank" class="home_social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/StasiStoeva" target="_blank" class="home_social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/stanislavastoeva" target="_blank" class="home_social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="https://github.com/StasiS-web" target="_blank" class="home_social-link">
+                            <i class="ri-github-line"></i>
+                        </a>
+                        <a href="https://codepen.io/StasiS-web" target="_blank" class="home_social-link">
+                            <i class="ri-codepen-line"></i>
+                        </a>
+                    </div>
 
-                    <a href="https://www.facebook.com/stanislavastoeva" target="_blank" class="home_social-link">
-                        <i class="ri-facebook-fill"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/stanislavastoeva" target="_blank" class="home_social-link">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                    <a href="https://github.com/StasiS-web" target="_blank" class="home_social-link">
-                        <i class="ri-github-line"></i>
-                    </a>
-
+                    
                     <a href="#about" class="home_scroll">
                         <i class="ri-mouse-line home_scroll-icon"></i>
                         <span class="home_scroll-name">Scroll Down</span>
@@ -176,7 +185,7 @@
                             <br />
                             <span class="about_subtitile">Cycling,</span>
                             <br />
-                            <span class="about_subtitile">Blogging</span>
+                            <span class="about_subtitile">Blogging,</span>
                             <span class="about_subtitile">Reading</span>
                         </div>
                     </div>
@@ -190,7 +199,10 @@
                         looking for work on web development projects.
                     </p>
 
-                    <a href="#contact" class="button">Contact Me</a>
+                    <a href="mailto:stanislavastoeva1410@gmail.com" class="button" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-send-plane-fill"></i>
+                        Say Hi
+                    </a>
                 </div>
             </div>
         </section>
@@ -561,12 +573,17 @@
 
             <div class="contact_container container grid">
                 <div class="contact_content">
-
+                    <div class="contact_description">
+                        <p class="extra_info">
+                          <em class="extra_info_title">Want to collaborate with me?</em>
+                          I am open to discussing front-end projects. Please contact me via email
+                        </p>
+                    </div>
                     <div class="contact_info">
                         <div class="contact_card">
                             <i class="ri-map-pin-user-line contact_card-icon"></i>
                             <h3 class="contact_card-title">Location</h3>
-                            <span class="contact_card-data">Guildford, United Kingdom</span>
+                            <span class="contact_card-data">Guildford, UK</span>
                         </div>
 
                         <div class="contact_card">
@@ -589,42 +606,15 @@
 
     <!--=============== FOOTER ===============-->
     <footer class="footer">
-            <ul class="footer_list">
-                <li>
-                    <a href="#about" class="footer_link">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://codingexpert.medium.com/" class="footer_link">
-                        Blog
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#skills" class="footer_link">
-                        Skills
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#portfolio" class="footer_link">
-                        Portfolio
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#qualification" class="footer_link">
-                        Qualification
-                    </a>
-                </li>
-            </ul>
-
             <ul class="footer_social">
                 <li>
                     <a href="https://www.facebook.com/stanislavastoeva" target="_blank" class="footer_social-icon">
                         <i class="ri-facebook-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/StasiStoeva" target="_blank" class="footer_social-icon">
+                        <i class="ri-twitter-fill"></i>
                     </a>
                 </li>
                 <li>
@@ -636,6 +626,11 @@
                 <li>
                     <a href="https://github.com/StasiS-web" target="_blank" class="footer_social-icon">
                         <i class="ri-github-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/StasiS-web" target="_blank" class="footer_social-icon">
+                        <i class="ri-codepen-line"></i>
                     </a>
                 </li>
             </ul>
