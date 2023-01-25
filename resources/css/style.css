@@ -941,10 +941,6 @@ time {
   background-color: var(--first-color);
 }
 
-.footer_container {
-  padding: 2rem 0 6rem;
-}
-
 .footer_title,
 .footer_link {
   color: var(--body-color);
@@ -966,6 +962,7 @@ time {
   display: flex;
   justify-content: center;
   column-gap: 1.5rem;
+  padding-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -986,7 +983,8 @@ time {
 
 .footer_copy {
   display: block;
-  margin-top: 4.5rem;
+  margin-top: 5rem;
+  padding-bottom: .5rem;
   color: var(--container-color);
   text-align: center;
   font-size: var(--smaller-font-size);
@@ -1034,6 +1032,10 @@ time {
 
   .skills_name {
     font-size: var(--small-font-size);
+  }
+
+  .contact_card-data {
+    color: var(--title-color);
   }
 }
 
@@ -1085,6 +1087,10 @@ time {
     width: 360px;
     margin: 0 auto;
   }
+
+  .contact_card-data {
+    color: var(--title-color);
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -1101,6 +1107,10 @@ time {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     column-gap: 3rem;
+  }
+
+  .contact_card-data {
+    color: var(--title-color);
   }
 }
 
@@ -1198,6 +1208,10 @@ time {
     column-gap: 6rem;
   }
 
+  .contact_card-data {
+    color: var(--title-color);
+  }
+
   .footer_social-icon {
     font-size: 1.25rem;
     padding: 0.4rem;
@@ -1241,6 +1255,6 @@ time {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #f45b69 transparent transparent;
+    border-color: transparent var(--container-color) transparent transparent;
   }
 }
