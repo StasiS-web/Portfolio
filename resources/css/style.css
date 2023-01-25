@@ -103,8 +103,8 @@ img {
   cursor: pointer;
   transition: color.3s;
   position: relative;
-  right: -550px;
-  top: -890px;
+  right: -450px;
+  top: -990px;
 }
 
 .change-theme:hover {
@@ -1043,6 +1043,7 @@ time {
     padding: 1rem 1.5rem;
   }
 
+
   .home_buttons {
     flex-direction: column;
   }
@@ -1080,6 +1081,10 @@ time {
     left: 0;
     right: 0;
     margin: 0 auto;
+  }
+
+  .change-theme {
+    right: -420px;
   }
 
   .home_handle {
@@ -1133,6 +1138,10 @@ time {
     height: 160px;
   }
 
+  .change-theme {
+    right: -380px;
+  }
+
   .portfolio_container {
     grid-template-columns: repeat(2, max-content);
   }
@@ -1165,6 +1174,10 @@ time {
 
   .nav {
     height: calc(var(h--header-height) + 1rem);
+  }
+
+  .change-theme {
+    right: -450px;
   }
 
   .home_handle {
