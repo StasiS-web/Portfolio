@@ -63,6 +63,17 @@ tabs.forEach(tab =>{
   
 
 /*=============== PORTFOLIO ===============*/
+var slideElement = document.getElementsByClassName('swiper-slide');
+var slideLength = slideElement.length;
+var paginationElement = document.getElementsByClassName('slider_controls')[0];
+
+var paginationHTML = [];
+
+for(var i = 0; i < slideLength; i++) {
+  paginationHTML.push('<div class="swiper-pagination dot></div>');
+}
+paginationElement.innerHTML = paginationHTML.join('');
+
 var Swipes = new Swiper(".mySwiper", {
     effect: "coverflow",
     loop: true,
@@ -79,7 +90,7 @@ var Swipes = new Swiper(".mySwiper", {
       clickable: true,
     },
     autoplay: {
-      delay: 5000,
+      delay: 2000,
       disableOnInteraction: false,
     }
   });
