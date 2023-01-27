@@ -1,7 +1,7 @@
 # Personal Portfolio
 
 ## Introduction
-It is a nice-looking web Portfolio that includes all my skills and knowledge in Website Design and Programming.
+It is a nice-looking web Portfolio that includes all my skills and knowledge in Website Design and Programming. Users have two optional themes to choose from to see on their screen: Light or Dark.
 
 ## :hammer: Used technologies
 
