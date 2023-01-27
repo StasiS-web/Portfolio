@@ -98,13 +98,15 @@ img {
 
 /*=============== THEME ===============*/
 .change-theme {
+  position: absolute;
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
   transition: color.3s;
   position: relative;
-  right: -450px;
-  top: -950px;
+  left: -450px;
+  top: -980px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .change-theme:hover {
@@ -291,15 +293,16 @@ body.light-theme {
   align-items: center;
   position: fixed;
   height: var(--header-height);
-  bottom: 2rem;
+  bottom: 1rem;
   left: 0;
   right: 0;
-  width: 358px;
+  width: 375px;
+  height: 88px;
   background-color: var(--container-color);
   box-shadow: 0 8px 32px rgba(64, 79, 165, 0.2);
   padding: 1.5rem 0.5rem;
   margin: 0 auto;
-  border-radius: 0.65rem;
+  border-radius: 0.65rem 0.65rem 0 0;
 }
 
 .nav a {
@@ -312,7 +315,7 @@ body.light-theme {
 }
 
 .nav a:hover {
-  background: var(--first-color);
+  background: var(--container-color);
   color: var(--first-color-alt);
 }
 
@@ -343,7 +346,7 @@ body.light-theme {
 
 .nav_link i {
   font-size: 1.5 rem;
-  color: var(--title-color);
+  color: var(--first-color-alt);
   z-index: 20px;
   transition: 0.3s;
 }
@@ -357,7 +360,7 @@ body.light-theme {
   position: absolute;
   font-weight: 500;
   transform: translateY(45px);
-  color: var(--title-color);
+  color: var(--first-color);
   padding: .3rem;
   z-index: 20px;
   transition: 0.4s;
@@ -366,16 +369,19 @@ body.light-theme {
 
 /* Active link */
 .active-link i {
-  color: var(--text-color);
+  color: var(--first-color);
 }
 
 .active-link .nav_name {
   opacity: 1;
   transform: translateY(28px);
+  bottom: 29px;
 }
 
 .active-link {
-  box-shadow: 0 0 16px rgba(163, 149, 233, 0.4);
+  /*box-shadow: insert 0 -16px -32px, insert 0 -16px -32px rgba(163, 149, 233, 0.4); */
+  box-shadow: 0 16px 32px rgba(163, 149, 233, 0.4);
+  border-radius: 25px;
 }
 
 /* Change background header */
@@ -1094,13 +1100,18 @@ time {
     padding: 1rem 1.5rem;
   }
 
+  .change-theme{
+    width: -100px;
+    left: -80px;
+  }
+
   .home_buttons {
     flex-direction: column;
   }
 
   .home_handle {
     width: 150%;
-    height: 250px;
+    height: 280px;
   }
 
   .home_img {
@@ -1113,6 +1124,11 @@ time {
 
   .certificates_content {
     padding: 0 5rem 0 5rem;
+  }
+
+  .certificates_data {
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
   }
 
   .skills_box {
@@ -1138,12 +1154,13 @@ time {
   }
 
   .change-theme {
-    right: -420px;
+    top: -965px;
+    left: -290px;
   }
 
   .home_handle {
-    width: 20%;
-    height: 130px;
+    max-width: 30%;
+    max-height: 160px;
   }
 
   .about_info {
@@ -1172,7 +1189,7 @@ time {
   }
 
   .certificates_content {
-    padding: 0 10rem 0 10rem;
+    padding: 0 20rem 0 20rem;
   }
 
   .contact_info {
@@ -1197,7 +1214,8 @@ time {
   }
 
   .change-theme {
-    right: -380px;
+    top: -970px;
+    left: -450px;
   }
 
   .portfolio_container {
@@ -1205,7 +1223,7 @@ time {
   }
 
   .contact_container {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
     justify-content: center;
     column-gap: 3rem;
   }
@@ -1235,7 +1253,7 @@ time {
   }
 
   .change-theme {
-    right: -450px;
+    left: -450px;
   }
 
   .home_handle {
@@ -1361,5 +1379,12 @@ time {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent var(--container-color) transparent transparent;
+  }
+}
+
+@media screen and (min-width: 428px) {
+  .change-theme {
+    top: -15px;
+    left: -90px;
   }
 }
