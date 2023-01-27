@@ -926,6 +926,8 @@ time {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.8rem;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
 }
 
 .swiper-pagination .dot{
@@ -952,18 +954,23 @@ time {
 
 .swiper-button-next{
   padding-left: 8rem;
+  right: 10px;
+}
+
+.swiper-button-prev{
+  left: 10px;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
+  position: absolute;
   align-items: center;
   color: var(--first-color);
   cursor: pointer;
   display: block;
   transition: .6s ease;
   font-size: 1.5rem;
-  padding-top: 30rem;
-  top: 0;
+  top: 40%;
   z-index: 2;
 }
 
