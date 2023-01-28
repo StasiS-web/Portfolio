@@ -8,6 +8,32 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader);
 
+/*=============== STATIC COUNTER ===============*/
+let infoSection = document.querySelector('#info');
+let staticCounter = document.querySelectorAll('.about_box .count');
+let started = false;
+
+function startCounter(element) {
+  let goal = element.dataset.count;
+  let count = setInterval(() => {
+    element.textContent++;
+
+    if(element.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY >= infoSection.offsetTop - 500) {
+    if(!started) {
+      staticCounter.forEach((num) => startCounter(num));
+    }
+
+    started = true;
+  }
+})
+
 /*=============== QUALIFICATION ===============*/
 const tabs = document.querySelectorAll('[data-target]'),
     tabContent = document.querySelectorAll('[data-content]');
