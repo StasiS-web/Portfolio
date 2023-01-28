@@ -579,12 +579,20 @@ body.light-theme {
   row-gap: .5rem;
 }
 
-.about_img {
-  width: 220px;
-  height: 400;
-  border-radius: 1.5rem;
-  justify-self: center;
-  margin-bottom: 120px;
+.about_container .image {
+  flex: 1 1 40rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.about_container .image img {
+  height: 35rem;
+  box-shadow: 0 0.5rem 1rem rgba(163, 149, 233, 0.4);
+  border-top: 3rem solid var(--container-color);
+  border-right: 3rem solid var(--container-color);
+  border-bottom: 3rem solid var(--first-color);
+  border-left: 3rem solid var(--first-color);
+  border-radius: .5rem;
 }
 
 .about_data {
@@ -733,7 +741,7 @@ a .about_title:hover{
   width: 40px;
 }
 
-.skills {
+.skills_section {
   font-size: 1rem;
   color: var(--first-color);
 }
