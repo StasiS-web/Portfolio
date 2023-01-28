@@ -1223,7 +1223,7 @@ time {
   }
 
   .contact_container {
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(2, max-content);
     justify-content: center;
     column-gap: 3rem;
   }
@@ -1382,9 +1382,33 @@ time {
   }
 }
 
-@media screen and (min-width: 428px) {
+/* For Apple Smartphone: iPhone 12 Pro Max */
+@media only screen and (min-width: 428px) {
   .change-theme {
-    top: -15px;
-    left: -90px;
+    top: -860px;
+    left: -180px;
+  }
+
+  .home_handle {
+    max-height: 180px;
+  }
+
+  .home_img{
+    width: 200px;
+  }
+
+  .contact_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-height: 926px) {
+  .change-theme {
+    left: -750px;
+    top: -990px;
+  }
+
+  .home_handle {
+    max-height: 216px;
   }
 }
