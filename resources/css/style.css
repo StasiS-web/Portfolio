@@ -170,11 +170,12 @@ body.light-theme {
   color: var(--first-color);
 }
 
-.light-theme .about_social .about_icon:hover
-{
-  background-color: var(--container-color);
+.light-theme .about_container .image img{
+  border-top: 3rem solid var(--container-secondary-color);
+  border-right: 3rem solid var(--container-secondary-color);
 }
 
+.light-theme .about_social .about_icon:hover,
 .light-theme .about_social .dev_icon:hover {
   background-color: var(--container-color);
 }
@@ -214,7 +215,7 @@ body.light-theme {
 }
 
 .light-theme .footer_social-icon:hover{
-  background-color: var(--text-color);
+  background-color: var(--container-color);
 }
 
 .light-theme .timeline ul li:nth-child(odd) div::before {
@@ -408,6 +409,7 @@ body.light-theme {
 .home_container{
   background-image: url("https://res.cloudinary.com/dnvg6uuxl/image/upload/v1674748943/portfolio_resume_website/Website_bwpvbz.png");
   position: relative;
+  height: 465px;
   row-gap: 4.5rem;
   padding-top: 2rem;
 }
@@ -451,8 +453,8 @@ body.light-theme {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 190px;
-  height: 293px;
+  width: 180px;
+  height: 650px;
   margin-top: 45px;
   background: linear-gradient(
     180deg,
@@ -653,7 +655,7 @@ a .about_title:hover{
 
 .about_social .about_icon:hover,
 .about_social .dev_icon:hover{
-  background-color: #d8e3f4;;
+  background-color: #d8e3f4;
 }
 
 .about_title {
@@ -729,8 +731,8 @@ a .about_title:hover{
 }
 
 .skills_blob {
-  width: 80px;
-  height: 100px;
+  width: 100px;
+  height: 150px;
   background-color: var(--container-color);
   border-radius: 3rem;
   place-items: center;
@@ -755,7 +757,7 @@ a .about_title:hover{
 
 .skills_level {
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 /*=============== QUALIFICATION ===============*/
@@ -961,6 +963,7 @@ time {
   width: 100%;
   height: 100%;
   text-align: center;
+  border-radius: 5%;
   transition: transform .6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(64, 79, 165, 0.2);;
@@ -1181,12 +1184,16 @@ time {
 }
 
 .footer_social-icon {
-  background-color: var(--body-color);
+  background-color: var(--container-color);
   color: var(--first-color);
   padding: 0.25rem;
   border-radius: 0.25rem;
   font-size: 1rem;
   display: inline-flex;
+}
+
+.footer_social-icon:hover{
+  background-color: #d8e3f4;
 }
 
 .footer_copy {
@@ -1195,7 +1202,7 @@ time {
   padding-bottom: 7rem;
   color: var(--container-color);
   text-align: center;
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -1512,11 +1519,16 @@ time {
 
   .home_img{
     width: 200px;
+    height: 300px;
+  }
+
+  .about_container .image img {
+    height: 25rem;
   }
 
   .about_me .button {
-    top: 250px;
-    left: 150px;
+    top: 260px;
+    left: 160px;
   }
 
   .contact_container {
