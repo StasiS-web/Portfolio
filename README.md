@@ -21,7 +21,7 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 
 [Stanislava Stoeva](https://github.com/StasiS-web) 
 * Find my thread post about this project on [Twitter](https://twitter.com/StasiStoeva) 
-* <img src="https://img.shields.io/github/stars/StasiS-web/StasiS-web.github.io?color=%23C7D7EF&label=Stars&logo=Github&style=plastic">
+<img src="https://img.shields.io/github/stars/StasiS-web/StasiS-web.github.io?color=%23C7D7EF&label=Stars&logo=Github&style=plastic" width=auto height="25">
 
 ## ✍️ Give me a feedback
 If you like this project give me a 🌟 and/or feedback on Twitter!
