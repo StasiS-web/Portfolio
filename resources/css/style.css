@@ -125,6 +125,11 @@ img {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+.header .nav .change-theme {
+  left: -650px;
+}
+
+
 .change-theme:hover {
   color: var(--first-color);
 }
@@ -410,7 +415,7 @@ body.light-theme {
 .home_container{
   background-image: url("https://res.cloudinary.com/dnvg6uuxl/image/upload/v1674748943/portfolio_resume_website/Website_bwpvbz.png");
   position: relative;
-  height: 470px;
+  max-height: 650px;
   row-gap: 4.5rem;
   padding-top: 2rem;
 }
@@ -440,8 +445,9 @@ body.light-theme {
   font-size: var(--biggest-font-size);
 }
 
-.home_img {
-  width: 150px;
+.home_handle img {
+  width: 250px;
+  height: 380px;
 }
 
 .img {
@@ -450,12 +456,16 @@ body.light-theme {
   justify-content: center;
 }
 
+.home_section .img .home_handle{
+  width: 200px;
+  height: 650px;
+}
+
 .home_handle {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 180px;
-  height: 650px;
+  
   margin-top: 45px;
   background: linear-gradient(
     180deg,
@@ -515,9 +525,9 @@ body.light-theme {
 .button::before{
   content: '';
   position: fixed;
-  top: 25%;
-  left: 25%;
-  transform: translate(-25%, -25%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: .5rem;
   transition: .4s linear;
 }
@@ -688,6 +698,10 @@ a .about_title:hover{
   margin-bottom: .5rem;
 }
 
+.about_box .about_subtitle{
+  display: inline;
+}
+
 .about_description{
   display: flex;
   justify-content: center;
@@ -769,12 +783,13 @@ a .about_title:hover{
 .skills_name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  line-height: 18px;
+  line-height: 20px;
   margin-bottom: 0.25rem;
 }
 
 .skills_level {
   font-size: var(--smaller-font-size);
+  font-weight: var(--font-regular);
   color: var(--text-color);
 }
 
