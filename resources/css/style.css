@@ -184,7 +184,8 @@ body.light-theme {
   background-color: var(--title-color);
 }
 
-.light-theme .home_scroll {
+.light-theme .home_scroll,
+.light-theme .home_buttons .button--ghost{
   color: var(--first-color);
 }
 
@@ -409,7 +410,7 @@ body.light-theme {
 .home_container{
   background-image: url("https://res.cloudinary.com/dnvg6uuxl/image/upload/v1674748943/portfolio_resume_website/Website_bwpvbz.png");
   position: relative;
-  height: 465px;
+  height: 470px;
   row-gap: 4.5rem;
   padding-top: 2rem;
 }
@@ -472,6 +473,10 @@ body.light-theme {
   gap: .5rem;
 }
 
+.home_buttons a:hover{
+  background-color: var(--first-color);
+}
+
 .home_scroll {
   position: absolute;
 }
@@ -497,23 +502,36 @@ body.light-theme {
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border-radius: .5rem;
   background-color: var(--first-color);
-  color: var(--body-color);
-  padding: 0.75rem 1rem;
-  border-radius: 3rem;
+  box-shadow: 0 .5rem 1rem rgba(163, 149, 233, .2);
+  position: relative;
+  color: var(--container-color);
   font-weight: var(--font-medium);
-  transition: 0.4s;
+}
+
+.button::before{
+  content: '';
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%, -25%);
+  border-radius: .5rem;
+  transition: .4s linear;
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
-  color: var(--body-color);
+  background-color: rgba(163, 149, 233, .2);
+  color: var(--title-color);
+  border: .2rem solid var(--first-color);
 }
 
 .button--ghost {
   background-color: transparent;
-  border: 2px solid var(--first-color);
-  color: var(--first-color);
+  border: .2rem solid var(--first-color);
+  color: rgba(163, 149, 233);
 }
 
 /*=============== MAGIC BUTTON ===============*/
@@ -676,13 +694,13 @@ a .about_title:hover{
   align-content: center;
   position: relative;
   font-weight: var(--normal-font-size);
+  font-family: sans-serif;
 }
 
-.about_me a {
-  top: 90%;
-  left: 40%;
-  margin-left: 60px;
-  z-index: 2;
+.about_data .about_me a {
+  top: 4px;
+  right: 40px;
+  gap: .5rem;
  }
 
 /*=============== SKILLS ===============*/
@@ -917,6 +935,13 @@ time {
   padding-top: 4rem;
 }
 
+.certificate_sections .certificates_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .certificate_link {
   margin-bottom: .5rem;
 }
@@ -1011,9 +1036,11 @@ time {
 /*=============== PORTFOLIO ===============*/
 .portfolio_container {
   overflow: initial;
+  margin-top: 2rem;
 }
 
 .portfolio_content {
+
   padding: 0 1.5rem;
   margin-bottom: var(--mb-0-75);
 }
@@ -1027,6 +1054,7 @@ time {
   text-align: center;
   margin-top: var(--mb-0-75);
   margin-bottom: var(--mb-0-75);
+  font-family: sans-serif;
   font-weight: var(--font-regular);
   font-size: var(--normal-font-size);
 }
@@ -1079,6 +1107,7 @@ time {
   position: relative;
 }
 
+
 .swiper-button-next{
   padding-left: 8rem;
   right: 10px;
@@ -1122,6 +1151,13 @@ time {
   padding-bottom: 3rem;
 }
 
+.contact_section .contact_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .contact_title {
   text-align: center;
   font-size: var(--h3-font-size);
@@ -1153,6 +1189,7 @@ time {
 
 .contact_description p {
   font-weight: var(--normal-font-size);
+  font-family: sans-serif;
 }
 
 .card-data,
