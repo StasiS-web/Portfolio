@@ -445,42 +445,12 @@ body.light-theme {
   font-size: var(--biggest-font-size);
 }
 
-.home_handle img {
-  width: 250px;
-  height: 380px;
-}
-
-.img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home_section .img .home_handle{
-  width: 200px;
-  height: 650px;
-}
-
-.home_handle {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  
-  margin-top: 45px;
-  background: linear-gradient(
-    180deg,
-    rgba(163, 149, 233, 1),
-    rgba(163, 149, 233, .2)
-  );
-  border-radius: 10rem 10rem 1rem 1rem;
-  overflow: hidden;
-}
-
 .home_buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: .5rem;
+  margin-bottom: 1rem;
 }
 
 .home_buttons a:hover{
@@ -713,7 +683,7 @@ a .about_title:hover{
 
 .about_data .about_me a {
   top: 4px;
-  right: 40px;
+  left: 150px;
   gap: .5rem;
  }
 
@@ -1285,15 +1255,6 @@ time {
     flex-direction: column;
   }
 
-  .home_handle {
-    width: 150%;
-    height: 280px;
-  }
-
-  .home_img {
-    width: 130px;
-  }
-
   .about_info {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1334,11 +1295,6 @@ time {
     left: -290px;
   }
 
-  .home_handle {
-    max-width: 30%;
-    max-height: 160px;
-  }
-
   .about_info {
     grid-template-columns: repeat(3, 140px);
     justify-content: center;
@@ -1354,10 +1310,6 @@ time {
 
   .skills_content {
     padding: 2rem 4rem;
-  }
-
-  .home_img-bg {
-    width: 340px;
   }
 
   .portfolio_container {
@@ -1430,15 +1382,6 @@ time {
 
   .change-theme {
     left: -450px;
-  }
-
-  .home_handle {
-    width: 28%;
-    height: 290px;
-  }
-
-  .home_img {
-    width: 265px;
   }
 
   .home_social-link {
@@ -1565,22 +1508,13 @@ time {
     left: -180px;
   }
 
-  .home_handle {
-    max-height: 180px;
-  }
-
-  .home_img{
-    width: 200px;
-    height: 300px;
-  }
-
   .about_container .image img {
     height: 25rem;
   }
 
-  .about_me .button {
-    top: 260px;
-    left: 160px;
+  .about_data .about_me a {
+    top: 5px;
+    right: 160px;
   }
 
   .contact_container {
@@ -1592,9 +1526,5 @@ time {
   .change-theme {
     left: -750px;
     top: -990px;
-  }
-
-  .home_handle {
-    max-height: 216px;
   }
 }
