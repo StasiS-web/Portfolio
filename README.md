@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+<img src="https://img.shields.io/github/stars/StasiS-web/StasiS-web.github.io?color=%23C7D7EF&label=Stars&logo=Github&style=plastic" width=auto height="25">
+
 ## Introduction
 It is a nice-looking web Portfolio that includes all my skills and knowledge in Website Design and Programming. Users have two optional themes to choose from to see on their screen: Light or Dark.
 
@@ -24,8 +26,6 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 
 ## ✍️ Give me a feedback
 If you like this project give me a 🌟 and/or feedback on Twitter!
-
-<img src="https://img.shields.io/github/stars/StasiS-web/StasiS-web.github.io?color=%23C7D7EF&label=Stars&logo=Github&style=plastic" width=auto height="25">
 
 ## Acknowledments
 Thanks to Marlon for the [Theme](https://github.com/bedimcode/responsive-portfolio-website-Ansel). 
