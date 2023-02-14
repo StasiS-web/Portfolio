@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-<img src="https://img.shields.io/github/stars/StasiS-web/StasiS-web.github.io?color=%23C7D7EF&label=Stars&logo=Github&style=plastic" width=auto height="25">
+<img src="https://img.shields.io/github/stars/StasiS-web/StasiS-web.github.io?color=%23C7D7EF&label=Stars&logo=Github&style=plastic" width=auto height="20" /> <img src="https://img.shields.io/github/deployments/StasiS-web/StasiS-web.github.io/github-pages?label=Deploy&style=plastic" width=auto height="20" /> 
 
 ## Introduction
 It is a nice-looking web Portfolio that includes all my skills and knowledge in Website Design and Programming. Users have two optional themes to choose from to see on their screen: Light or Dark.
