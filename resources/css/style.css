@@ -86,6 +86,7 @@ body::before{
 h1,
 h2,
 h3 {
+  letter-spacing: 1.6px;
   line-height: 1.3;
   color: var(--title-color);
   font-family: var(--title-font);
@@ -93,7 +94,7 @@ h3 {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 a {
@@ -114,14 +115,11 @@ img {
 
 /*=============== THEME ===============*/
 .change-theme {
-  position: absolute;
+  position: relative;
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
   transition: color.3s;
-  position: relative;
-  left: -450px;
-  top: -980px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
@@ -259,6 +257,7 @@ body.light-theme {
 }
 
 .main {
+  letter-spacing: .8px;
   overflow: hidden;
 }
 
@@ -381,9 +380,10 @@ body.light-theme {
   font-size: var(--smaller-font-size);
   position: absolute;
   font-weight: 500;
+  letter-spacing: .8px;
   transform: translateY(45px);
   color: var(--first-color);
-  padding: .3rem;
+  padding: .04rem;
   z-index: 20px;
   transition: 0.4s;
   opacity: 0;
@@ -638,7 +638,7 @@ a .about_title:hover{
 .about_icon{
   font-size: 1.5rem;
   margin-bottom: .5rem;
-  padding: 4.5px;
+  padding: 3.5px;
 }
 
 .dev_icon {
@@ -682,7 +682,6 @@ a .about_title:hover{
 }
 
 .about_data .about_me a {
-  top: 4px;
   left: 150px;
   gap: .5rem;
  }
@@ -694,7 +693,6 @@ a .about_title:hover{
 }
 
 .skills_content {
-  background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: 1.25rem;
 }
@@ -720,7 +718,7 @@ a .about_title:hover{
 }
 
 .skills_group {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem 2rem;
   align-content: flex-start;
   row-gap: .5rem;
@@ -733,7 +731,7 @@ a .about_title:hover{
 }
 
 .skills_blob {
-  width: 100px;
+  width: 140px;
   height: 150px;
   background-color: var(--container-color);
   border-radius: 3rem;
@@ -746,7 +744,7 @@ a .about_title:hover{
 }
 
 .skills_section {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--first-color);
 }
 
@@ -758,7 +756,7 @@ a .about_title:hover{
 }
 
 .skills_level {
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   font-weight: var(--font-regular);
   color: var(--text-color);
 }
@@ -920,7 +918,7 @@ time {
   padding-top: 4rem;
 }
 
-.certificate_sections .certificates_container{
+.certificates_container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1081,6 +1079,7 @@ time {
 .swiper-slide {
   text-align: center;
   padding: .3rem;
+  z-index: 3;
   border-radius: 1.25rem;
   transition: all 200s linear;
   backdrop-filter: blur(10px);
@@ -1167,7 +1166,7 @@ time {
 }
 
 .contact_card-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--first-color-alt);
   margin-bottom: 0.25rem;
 }
@@ -1241,9 +1240,10 @@ time {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   .nav_menu {
     padding: 1rem 1.5rem;
+    margin-left: 15px;
   }
 
   .change-theme{
@@ -1255,8 +1255,16 @@ time {
     flex-direction: column;
   }
 
+  .about_container .image img {
+    height: 100%;
+  }
+
   .about_info {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills_group {
+    gap: 1.5rem 1rem;
   }
 
   .certificates_content {
@@ -1278,6 +1286,44 @@ time {
 
   .contact_card-data {
     color: var(--title-color);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .about_data .about_me a {
+    top: 15px;
+    left: 15px;
+   }
+}
+
+@media only screen and (min-width: 428px) {
+  .change-theme {
+    top: -860px;
+    left: -180px;
+  }
+
+  .about_container .image img {
+    height: 25rem;
+  }
+
+  .about_data .about_me a {
+    top: 5px;
+    left: 180px;
+  }
+
+  .contact_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about_title {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .about_data .about_me a {
+    top: 10px;
+    left: 15px;
   }
 }
 
@@ -1332,6 +1378,42 @@ time {
 
   .contact_card-data {
     color: var(--title-color);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--container-color) transparent transparent;
+  }
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
   }
 }
 
@@ -1484,47 +1566,43 @@ time {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-  .timeline ul li:nth-child(even) div {
-    left: 45px;
-  }
-  .timeline ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent var(--container-color) transparent transparent;
-  }
-}
-
-/* For Apple Smartphone: iPhone 12 Pro Max */
-@media only screen and (min-width: 428px) {
-  .change-theme {
-    top: -860px;
-    left: -180px;
-  }
-
-  .about_container .image img {
-    height: 25rem;
-  }
-
-  .about_data .about_me a {
-    top: 5px;
-    right: 160px;
-  }
-
-  .contact_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media only screen and (min-height: 926px) {
   .change-theme {
     left: -750px;
     top: -990px;
+  }
+} 
+
+@media only screen and (min-width: 900px) {
+  .nav{
+    width: 360px;
+  }
+
+  .home_buttons {
+    display: inline;
+  }
+
+  .home_data {
+    margin-bottom: 25px;
+  }
+
+  .about_data .about_me a {
+    left: 140px;
+   }
+
+
+
+   .section_title{
+    margin-top: 25px;
+  }
+
+  .skills_container{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills_content{
+    width: 400px;
   }
 }
