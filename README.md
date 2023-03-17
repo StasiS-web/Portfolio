@@ -15,7 +15,7 @@ It is a nice-looking web Portfolio that includes all my skills and knowledge in 
 * [Swiper](https://swiperjs.com/)
 * [Scroll Reveal](https://scrollrevealjs.org/)
 * [Photoleap](https://www.photoleapapp.com/landing/photoleap/v1/?flowId=photoleap_interactive&variantId=plt) - (Mobile Photo Editor to edit some of the images)
-* [Clodinary](https://cloudinary.com/) - (to store project images)
+* [Cloudinary](https://cloudinary.com/) - (to store project images)
 
 ## :computer: [Demo](https://stasis-web.github.io/index.html) :desktop_computer:
 
